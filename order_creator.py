@@ -14,7 +14,7 @@ def new_Order(cursor:sqlite3.Cursor, IIDs, LID:int, CID:int, Delivery_Address:st
         cursor.execute("""INSERT INTO Contain(PID, IID) VALUES (?, ?);""", (PID,IIDs[i]))
 
 
-conn = sqlite3.connect("shippingdbase.db")
+conn = sqlite3.connect("shipping_dbase.db")
 cursor = conn.cursor()
 
 new_Order(cursor,[9,8],18,3, 'youll never find me', 1, "March", 2024, "13:02")
